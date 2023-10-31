@@ -29,3 +29,24 @@ input:-webkit-autofill:focus {
     background-color 600000s 0s,
     color 600000s 0s;
 }
+
+@font-face {
+  font-family: "CourierPrime";
+  src: url("/fonts/CourierPrime/CourierPrime-Regular.ttf") format("ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "CourierPrime";
+  src: url("/fonts/CourierPrime/CourierPrime-Bold.ttf") format("ttf");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "CourierPrime";
+  src: url("/fonts/CourierPrime/CourierPrime-Italic.ttf") format("ttf");
+  font-weight: normal;
+  font-style: italic;
+}
