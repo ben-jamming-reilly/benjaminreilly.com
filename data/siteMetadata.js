@@ -1,12 +1,12 @@
 /** @type {import("pliny/config").PlinyConfig } */
 const siteMetadata = {
-  title: "ben reilly | interested in stuff",
+  title: "ben reilly",
   author: "Ben Reilly",
   headerTitle: "ben reilly",
   description: "food, if you will",
   language: "en-us",
   theme: "system", // system, dark or light
-  siteUrl: "https://tailwind-nextjs-starter-blog.vercel.app",
+  siteUrl: "https://benjaminreilly.com",
   siteRepo: "https://github.com/timlrx/tailwind-nextjs-starter-blog",
   siteLogo: "/static/images/logo.png",
   socialBanner: "/static/images/twitter-card.png",
@@ -14,7 +14,7 @@ const siteMetadata = {
   email: "benreilly0809@gmail.com",
   github: "https://github.com/ben-jamming-reilly",
   twitter: "https://twitter.com/benjamin_really",
-  youtube: "https://youtube.com",
+  // youtube: "https://youtube.com",
   linkedin: "https://www.linkedin.com/in/benjamin-reilly-18b58619a/",
   locale: "en-US",
   analytics: {
