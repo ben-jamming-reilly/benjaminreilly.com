@@ -32,8 +32,8 @@ function PostListItem({ post }: { post: any }) {
                     ))}
                   </div>
                 </div>
-                <div className="col-span-3 sm:col-span-1">
-                  <dl>
+                <div className="col-span-3 sm:col-span-1 ">
+                  <dl className="sm:ml-auto sm:w-fit h-fit">
                     <dt className="sr-only">Published on</dt>
                     <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
                       <time dateTime={date}>
@@ -43,9 +43,9 @@ function PostListItem({ post }: { post: any }) {
                   </dl>
                 </div>
               </div>
-              <div className="prose max-w-none text-gray-500 dark:text-gray-400">
-                {summary}
-              </div>
+            </div>
+            <div className="prose max-w-none text-gray-500 dark:text-gray-400">
+              {summary}
             </div>
             <div className="text-base font-medium leading-6">
               <Link

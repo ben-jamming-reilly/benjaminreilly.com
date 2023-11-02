@@ -94,7 +94,7 @@ export default function ListLayoutWithTags({
             {title}
           </h1>
         </div>
-        <div className="flex sm:space-x-24">
+        <div className="flex flex-grow flew-row  w-max">
           <div>
             <ul>
               {displayPosts.map((post) => {
@@ -103,8 +103,8 @@ export default function ListLayoutWithTags({
                   <li key={path} className="py-5">
                     <article className="flex flex-col space-y-2 xl:space-y-0">
                       <div className="space-y-3">
-                        <div className="flex flex-col sm:flex-row justify-between">
-                          <div>
+                        <div className="grid grid-cols-3  justify-between">
+                          <div className="col-span-3 sm:col-span-2">
                             <h2 className="text-2xl font-bold leading-8 tracking-tight">
                               <Link
                                 href={`/${path}`}
@@ -117,7 +117,7 @@ export default function ListLayoutWithTags({
                               {tags?.map((tag) => <Tag key={tag} text={tag} />)}
                             </div>
                           </div>
-                          <div>
+                          <div className="col-span-3 sm:col-span-2 w-full">
                             <dl>
                               <dt className="sr-only">Published on</dt>
                               <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
