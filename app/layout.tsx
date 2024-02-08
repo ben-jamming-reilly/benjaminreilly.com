@@ -10,6 +10,7 @@ import Footer from "@/components/Footer";
 import siteMetadata from "@/data/siteMetadata";
 import { ThemeProviders } from "./theme-providers";
 import { Metadata } from "next";
+import { Analytics as VercelAnalytics } from "@vercel/analytics/react";
 
 const courier_prime = Courier_Prime({
   weight: "400",
@@ -105,6 +106,7 @@ export default function RootLayout({
                 <main className="mb-auto">{children}</main>
               </SearchProvider>
               <Footer />
+              <VercelAnalytics />
             </div>
           </SectionContainer>
         </ThemeProviders>
