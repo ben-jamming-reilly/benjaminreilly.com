@@ -66,7 +66,7 @@ function PostListItem({ post }: { post: any }) {
 const Summary = ({ className }: { className?: string }) => (
   <div className={"space-y-2 " + className}>
     <p>sup, i'm ben.</p>
-    <p>i'm probably working on or for a startup right now. neutral good. </p>
+    <p>i'm probably building something rn. neutral good. </p>
   </div>
 );
 
