@@ -14,6 +14,7 @@ const siteMetadata = {
   email: "benreilly0809@gmail.com",
   github: "https://github.com/ben-jamming-reilly",
   twitter: "https://twitter.com/benjamin_really",
+  bluesky: "https://bsky.app/profile/benreally.bsky.social",
   // youtube: "https://youtube.com",
   linkedin: "https://www.linkedin.com/in/benjamin-reilly-18b58619a/",
   locale: "en-US",

@@ -71,11 +71,12 @@ const Summary = ({ className }: { className?: string }) => (
 );
 
 const Socials = ({ className }: { className?: string }) => {
-  const links = ["github", "twitter", "linkedin"];
+  const links = ["github", "bluesky", "twitter", "linkedin"];
   return (
     <div className={className}>
       <strong>
-        find me <span className="text-primary-500">@</span>
+        find me on
+        {/*  <span className="text-primary-500">@</span> */}
       </strong>
       <ul className="list-disc list-inside ">
         {links.map((social) => (
