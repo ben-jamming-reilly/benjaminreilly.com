@@ -7,7 +7,7 @@ const siteMetadata = {
   language: "en-us",
   theme: "system", // system, dark or light
   siteUrl: "https://benjaminreilly.com",
-  siteRepo: "https://github.com/timlrx/tailwind-nextjs-starter-blog",
+  siteRepo: "https://github.com/ben-jamming-reilly/benjaminreilly.com",
   siteLogo: "/static/images/logo.png",
   socialBanner: "/static/images/twitter-card.png",
   // mastodon: "https://mastodon.social/@mastodonuser",
@@ -16,7 +16,7 @@ const siteMetadata = {
   twitter: "https://twitter.com/benjamin_really",
   bluesky: "https://bsky.app/profile/benreally.bsky.social",
   // youtube: "https://youtube.com",
-  linkedin: "https://www.linkedin.com/in/benjamin-reilly-18b58619a/",
+  linkedin: "https://www.linkedin.com/in/ben-reilly-18b58619a/",
   locale: "en-US",
   analytics: {
     // If you want to use an analytics provider you have to add it to the
