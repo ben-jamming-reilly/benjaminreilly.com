@@ -11,6 +11,12 @@ const projectsData = [
     imgSrc: "/static/images/parasocial-home.png",
     href: "https://parasocial.online/",
   },
+  {
+    title: "SF Candidate Compare",
+    description: `A no nonsense way of finding which SF mayoral candidate aligns with you`,
+    imgSrc: "/static/images/candidatecompare.png",
+    href: "https://sfcandidatecompare.com/",
+  },
 ];
 
 export default projectsData;
