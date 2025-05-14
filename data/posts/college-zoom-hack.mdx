@@ -1,0 +1,85 @@
+---
+title: "A Hack I Used to Skip Class"
+date: "2025-04-24"
+lastmod: "2025-04-24"
+tags: ["tech", "zoom", "hacks"]
+draft: false
+summary: "How I faked being present in college Zoom classes by creating a fake webcam"
+images: ["/static/images/twitter-card.png"]
+---
+
+Like most people, the pandemic was a formative time for me.
+
+It made me reconsider what I actually wanted to do with my time—and I realized that sitting through Zoom lectures wasn’t always at the top of that list. But there was one problem: my professors required cameras to be on.
+
+So I got to work building a fake webcam.
+
+## Step 1: Creating a Fake Webcam
+
+Zoom doesn’t verify whether your camera is “real.” It just trusts that your operating system gives it a legitimate video feed. So if you can create a virtual video device and send a video to it, Zoom will treat it as a real webcam.
+
+Thankfully, someone already wrote a Linux kernel module for this:
+
+👉 [v4l2loopback](https://github.com/umlaeute/v4l2loopback)
+
+This module creates **virtual video devices**, which is exactly what I needed.
+
+### Setting It Up
+
+First, clone the repo and install the kernel module:
+
+```bash
+make && sudo make install
+sudo depmod -a
+
+```
+
+Then, load the module:
+
+```bash
+sudo modprobe v4l2loopback
+
+```
+
+Once this is done, you should see a new video device on your machine—for me, it was `/dev/video2`.
+
+## Step 2: Feed It a Fake Video
+
+Now that I had a virtual webcam, I needed to feed it a video file. Enter [FFmpeg](https://ffmpeg.org/), the Swiss Army knife of video tools.
+
+I wrote a simple shell script to stream a video file to my virtual webcam:
+
+```bash
+#!/bin/sh
+
+echo "Spoofing camera with $1"
+ffmpeg -re -stream_loop -1 -i "$1" \
+  -vf "scale=1280:720,fps=30,format=yuv420p" \
+  -pix_fmt yuv420p \
+  -f v4l2 /dev/video2
+
+```
+
+This sends a looping, real-time video stream to the fake webcam. After testing it on Zoom with some stock footage, it worked like a charm.
+
+## Step 3: Using It
+
+To make it believable, I recorded a 10-minute clip of myself watching a YouTube video—expressionless, occasionally blinking, just like in real class.
+
+Before each session, I’d throw on the same generic gray shirt I wore in the video. I'd join class with my real camera, wait until roll call or instructions were done, then switch my Zoom input to the virtual camera.
+
+![fake-zoom-attention.png](/static/images/fake-zoom-attention.png)
+
+And just like that I automated zoom class. 
+
+After my first success, I figured that there might be classes where I may need to appear like I am working instead of blankly staring. So I made another recording of pretending to be diligently writing things down. 
+
+![fake-zoom-working.png](/static/images/fake-zoom-working.png)
+
+## Conclusion
+
+This hack was a fun to pull off, I certainly used it bit while I was in college. Luckily, no one ever asked why I wore the same shirt in every class.
+
+But more than anything, it reminded me that hacking—whether it’s software, systems, or daily life—is a great way to stay curious and keep learning.
+
+And that’s priceless.
