@@ -9,7 +9,7 @@ const siteMetadata = {
   siteUrl: "https://benjaminreilly.com",
   siteRepo: "https://github.com/ben-jamming-reilly/benjaminreilly.com",
   siteLogo: "/static/images/logo.png",
-  socialBanner: "/static/images/twitter-card.png",
+  socialBanner: "/static/images/tomorrowland.jpg",
   // mastodon: "https://mastodon.social/@mastodonuser",
   email: "benreilly0809@gmail.com",
   github: "https://github.com/ben-jamming-reilly",
